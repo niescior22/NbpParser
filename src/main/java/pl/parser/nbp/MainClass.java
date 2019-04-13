@@ -32,9 +32,9 @@ public class MainClass {
 
         List<Tabela_kursow> tabelaKursowList = zwrocListeZmapowanychKursowList(inputStreamList);
         
-        System.out.println(zaokrąglijDoCzwategoMiejsca(liczSredniąKupna(tabelaKursowList, kodWaluty)));
+        System.out.println(zaokrąglijDoCzwategoMiejsca(liczSredniąKupna(tabelaKursowList, kodWaluty))+"<---------- średnia kupna");
 
-        System.out.println(zaokrąglijDoCzwategoMiejsca(liczOdchylenieStandardoweKursuSprzedazy(tabelaKursowList,kodWaluty)));
+        System.out.println(zaokrąglijDoCzwategoMiejsca(liczOdchylenieStandardoweKursuSprzedazy(tabelaKursowList,kodWaluty))+"<--------- odchylenie standardowe sprzedazy");
 
 
     }
@@ -93,6 +93,12 @@ public class MainClass {
 
         return sparsowanaData;
     }
+
+    /**
+     * Metoda zwraca z daty np "2013-01-28"
+     * "2013" potrzebną do zwrocenia indeksu z daty
+     */
+
 
     public static String zwrocRokDaty(String date) {
         String sparsowanaData = "";
